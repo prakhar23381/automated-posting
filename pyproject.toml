@@ -1,0 +1,18 @@
+[project]
+name = "automated-posting"
+version = "1.0.0"
+description = "FastAPI service that publishes one message with a CTA link to several platforms at once."
+requires-python = ">=3.11"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "ASYNC", "RUF"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = ["ignore:Using `httpx` with `starlette.testclient`"]
+testpaths = ["tests"]

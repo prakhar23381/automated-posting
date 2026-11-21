@@ -1,0 +1,23 @@
+$ uvicorn app.main:app --host 0.0.0.0 --port 4000
+INFO:     Started server process [73056]
+INFO:     Waiting for application startup.
+2026-11-21T16:19:58+0530 level=INFO logger=app request_id=- startup platforms=8 configured=['Telegram', 'Mastodon', 'Bluesky', 'GitHub Gist', 'Telegraph']
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:4000 (Press CTRL+C to quit)
+2026-11-21T16:20:04+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 posting started platforms=8 configured=5
+2026-11-21T16:20:04+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='Dev.to' skipped reason=not_configured
+2026-11-21T16:20:04+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='Hugging Face' skipped reason=not_configured
+2026-11-21T16:20:04+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='Discord' skipped reason=not_configured
+2026-11-21T16:20:05+0530 level=INFO logger=app.services.public_check request_id=ce0c49b895d8 public check url=https://mastodon.social/@volage/117654041722407144 status=200 accessible=True
+2026-11-21T16:20:05+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='Mastodon' status=success duration_ms=1839 url=https://mastodon.social/@volage/117654041722407144 public=True
+2026-11-21T16:20:06+0530 level=INFO logger=app.services.public_check request_id=ce0c49b895d8 public check url=https://telegra.ph/Check-out-our-latest-business-platform-and-grow-your-online-11-21 status=200 accessible=True
+2026-11-21T16:20:06+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='Telegraph' status=success duration_ms=2352 url=https://telegra.ph/Check-out-our-latest-business-platform-and-grow-your-online-11-21 public=True
+2026-11-21T16:20:06+0530 level=INFO logger=app.services.public_check request_id=ce0c49b895d8 public check url=https://t.me/dxora_posting_test/5 status=200 accessible=True
+2026-11-21T16:20:06+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='Telegram' status=success duration_ms=2785 url=https://t.me/dxora_posting_test/5 public=True
+2026-11-21T16:20:06+0530 level=INFO logger=app.services.public_check request_id=ce0c49b895d8 public check url=https://gist.github.com/prakhar23381/89b0b357729269fc497ae94e56c62422 status=200 accessible=True
+2026-11-21T16:20:06+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='GitHub Gist' status=success duration_ms=2836 url=https://gist.github.com/prakhar23381/89b0b357729269fc497ae94e56c62422 public=True
+2026-11-21T16:20:07+0530 level=INFO logger=app.services.public_check request_id=ce0c49b895d8 public check url=https://bsky.app/profile/dxora-posting-test.bsky.social/post/3n2swjuaq4g2k status=200 accessible=True
+2026-11-21T16:20:07+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 platform='Bluesky' status=success duration_ms=3210 url=https://bsky.app/profile/dxora-posting-test.bsky.social/post/3n2swjuaq4g2k public=True
+2026-11-21T16:20:07+0530 level=INFO logger=app.services.posting_service request_id=ce0c49b895d8 posting finished success=True succeeded=5 failed=3
+2026-11-21T16:20:07+0530 level=INFO logger=app request_id=ce0c49b895d8 request method=POST path=/posting status=200 duration_ms=3216
+INFO:     127.0.0.1:56054 - "POST /posting HTTP/1.1" 200 OK
